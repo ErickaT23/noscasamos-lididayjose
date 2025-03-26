@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celeste & Luis</title>
+    <meta name="description" content="Llego el momento de unir nuestro amor por siempre">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nos Casamos">
+    <meta property="og:image" content="https://i.postimg.cc/tTKvk6t1/73-DSC06025-remini-enhanced.jpg">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preload" href="/images/envelope.png" as="image">
+    <link rel="preload" href="/images/17.png" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://kit.fontawesome.com/3c219a0781.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head> 
+<body>
+    <div style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <i class="fas fa-play"></i>
+        <i class="fas fa-pause"></i>
+    </div>    
+<div class="main-content">
+    <!-- Sección de sobre -->
+    <div id="envelope">
+        <div id="envelope-top"></div>
+        <div id="seal" onclick="openEnvelopeAndPlayMusic()">
+            <h2 class="fade-in-element">C | L</h2>
+        </div>
+        <div id="envelope-bottom"></div>
+    </div>
+    <!-- Sección de invitación -->
+    <div id="invitation" class="hidden">
+          <div class="photo-section fade-in-element">
+             <div class="photo-container">
+                 <img src="/images/17.png" alt="Foto de la pareja" class="photo fade-in-element fade-in-element" loading="lazy">
+             </div>
+                <div class="photo-text">
+                 <h1>Celeste & Luis</h1>
+                 <h2>14 . 06 . 2025</h2>
+               </div>
+          </div> 
+        <div class="contenedor-play">
+            <h1 class="texto-play fade-in-element fade-in-element">Que suerte tenerte - Fonseca</h1>
+            <div id="playPauseButton" class="icono-contenedor fade-in-element fade-in-element">
+                <i id="iconoPlayPause" class="fas fa-play" aria-hidden="true"></i>
+            </div>
+            <audio id="audioPlayer" src="/Fonseca - Que Suerte Tenerte - Letra (1).mp3"></audio>
+            <div class="progress-container">
+                <input id="progress-bar" type="range" value="0" min="0" max="100" step="1">
+                <div class="time-display">
+                    <span id="current-time">0:00</span> / <span id="duration-time">0:00</span>
+                </div>
+            </div>            
+        </div>               
+         <div class="content">
+            <div class="photo-section fade-in-element fade-in-element">
+                <div class="photo-container">
+                    <img src="/images/25.png" alt="Foto de la pareja" class="photo fade-in-element fade-in-element">
+                </div>
+                      <div class="photo-text fade-in-element fade-in-element">
+                          <h3 class="title">¡Nos casamos!</h3>
+                          <p>El día en que nuestros corazones se unen para siempre ha llegado. Compartan nuestra alegría en nuestra boda.</p>
+                          <div class="countdown fade-in-element fade-in-element">
+                              <div class="unit">
+                                 <span id="days" class="number">00</span>
+                                 <span class="label">Días</span>
+                              </div>
+                               <div class="unit">
+                                 <span id="hours" class="number">00</span>
+                                 <span class="label">Horas</span>
+                              </div>
+                             <div class="unit">
+                                 <span id="minutes" class="number">00</span>
+                                 <span class="label">Minutos</span>
+                             </div>
+                             <div class="unit">
+                                 <span id="seconds" class="number">00</span>
+                                 <span class="label">Segundos</span>
+                             </div>
+                         </div>                    
+                      </div>
+                 </div>
+            </div>
+            <!--Sección de invitados-->
+                    <div class="guest-section fade-in-element fade-in-element">
+                      <p id="guest-name" class="fade-in-element"></p>
+                   </div>
+            <!--Sección de pases-->
+                   <div class="invitation-info-section fade-in-element fade-in-element">
+                    <p>Invitación válida por <span id="passes"></span> <i class="fa-solid fa-ticket"></i> </p>
+                </div>
+            <!--Seccion de bendición de padres-->
+            <div class="blessing-section fade-in-element fade-in-element">
+                <h1>Con la bendición de Dios y de nuestros padres</h1>
+                <!--padres de la novia-->
+                <div class="padres-novia fade-in-element fade-in-element">
+                    <h1>Padres de la Novia</h1>
+                    <h2>Karina de Carias & Javier Carias </h2>
+                </div>
+                <!--padres de la novio-->
+                <div class="padres-novio fade-in-element fade-in-element">
+                    <h1>Padres del Novio</h1>
+                    <h2>Karla Mendizabal & Edwin Marroquín</h2>
+                </div>
+            </div>
+            <!--Foto-->
+            <div class="photo-full fade-in-element fade-in-element">
+                <img src="/images/21.png" alt="Foto de la pareja" loading="lazy">
+            </div>
+            <!--Sección de Itinerario-->
+            <div class="itinerary-section fade-in-element fade-in-element">
+                <h2>Itinerario</h2>
+                <div class="itinerary-item">
+                    <lord-icon 
+                     src="https://cdn.lordicon.com/hingizjn.json" 
+                     trigger="loop" 
+                     element="2000" 
+                     stroke="light" 
+                     colors="primary:#000,secondary:#d4af37" 
+                     class="lord-icon-style"
+                     ></lord-icon>
+                    <h2>Ceremonia</h2>
+                    <p>Escuela de Cristo</p>
+                    <div class="itinerary-details">
+                        <div class="time-location">
+                            <span class="date">14 de Junio</span>
+                            <span class="separator">|</span>
+                            <span class="time">11:40 hrs</span>
+                        </div>
+                        <p class="location">Calle de los pasos, 1ra. Ave, Antigua Guatemala</p>
+                        <button type="button"  class="directions-button" onclick="location.href='https://maps.app.goo.gl/UVVW3m3RmkScoYxP6'">CÓMO LLEGAR</button>
+                    </div>
+                </div>
+                <div class="itinerary-item">
+                    <lord-icon 
+                     src="https://cdn.lordicon.com/lhzhnixi.json" 
+                     trigger="loop" 
+                     element="2000"
+                     stroke="light" 
+                     colors="primary:#000000,secondary:#d4af37" 
+                     class="lord-icon-style"
+                     ></lord-icon>
+                    <h2>Recepción</h2>
+                    <p>Templo Convento Las Capuchinas</p>
+                    <div class="itinerary-details">
+                        <div class="time-location">
+                            <span class="date">14 de Junio</span>
+                            <span class="separator">|</span>
+                            <span class="time">13:00 hrs</span>
+                        </div>
+                        <p class="location">2a Avenida Norte y 2a Calle Oriente esquina. Antigua Guatemala</p>
+                        <button class="directions-button" onclick="location.href='https://maps.app.goo.gl/43FEb8KmmDKWhGgh9'">CÓMO LLEGAR</button>
+                    </div>
+                </div>
+            </div>
+            <!--Sección de guía para tu viaje-->
+            <div class="travel-section fade-in-element fade-in-element">
+                <h2>Guía para tu viaje</h2>
+                <p>Para que disfrutes al máximo tu visita a La Antigua Guatemala, te dejamos algunas recomendaciones para que tu viaje sea inolvidable.</p>
+                <a href="https://bodamarroquincarias.my.canva.site/recomendaciones-de-hospedajes-y-restaurantes" target="_blank">VER GUÍA</a>
+            </div>
+          <!--Sección de regalos-->
+            <div class="gifts-section fade-in-element">
+    <h2>Lluvia de Sobres</h2>
+    <lord-icon 
+        src="https://cdn.lordicon.com/ibydboev.json" 
+        trigger="loop" 
+        stroke="light" 
+        colors="primary:#000,secondary:#d4af37" 
+        class="lord-icon-style">
+    </lord-icon>
+    <p>Lo que más deseamos es compartir con ustedes este gran día. Si desean hacernos un obsequio, lo recibiremos con mucho cariño. Tendremos un cofre en la entrada para que puedan dejar su sobre con efectivo.</p>
+    <div class="container">
+        <button onclick="toggleDetails('guatemala')">Invitados en Guatemala</button>
+        <div class="details" id="guatemala">
+            <div class="bi">
+                <p><strong>Banco Industrial</strong></p>
+                <p><strong>Cuenta a nombre de:</strong> Luis Edwardo Marroquín Mendizabal</p>
+                <p><strong>Número de cuenta:</strong> 0144401130</p>
+                <p><strong>Tipo de cuenta:</strong> Monetaria</p>
+            </div>
+            <div class="bac">
+                <p><strong>Banco Bac Credomatic</strong></p>
+                <p><strong>Cuenta a nombre de:</strong> Luis Edwardo Marroquín Mendizabal</p>
+                <p><strong>Número de cuenta:</strong> 961784246</p>
+                <p><strong>Tipo de cuenta:</strong> Ahorro</p>
+            </div>
+        </div>
+
+        <button onclick="toggleDetails('extranjero')">Invitados fuera del país</button>
+        <div class="details" id="extranjero">
+            <p>Si quieres hacernos un regalo, les agradecemos que sea efectivo en dólares.</p>
+        </div>
+    </div>
+
+    <p>¡Gracias!</p>
+            </div>
+            <!--Sección de playlist-->
+            <div class="playlist-section fade-in-element fade-in-element">
+                <h2>Playlist</h2>
+                <lord-icon 
+                 src="https://cdn.lordicon.com/vvlnxtgv.json" 
+                 trigger="loop" 
+                 stroke="light" 
+                 colors="primary:#000000,secondary:#d4af37" 
+                 class="lord-icon-style"
+                 ></lord-icon>
+                <p>Nos encantaría que nos sugieras esas canciones que sabes que son geniales y no pueden faltar en nuestra boda.</p>
+                <button onclick="window.location.href='https://open.spotify.com/playlist/5Bb8ZxO01wUoZ4k7SBNXPe?si=83eebd2efcb74c57&pt=c5659acf7128d46aab0bafe5ba3f02a8'" target="_blank">ABRIR PLAYLIST EN SPOTIFY</button>
+            </div>
+             <!--Foto-->
+             <div class="photo-full fade-in-element fade-in-element">
+                <img src="/images/22.png" alt="Foto de la pareja" loading="lazy">
+            </div>
+            <!--Sección de dress code-->
+            <div class="dresscode-section">
+                <!-- Contenido fijo fuera de los botones desplegables -->
+                <h2>Dress Code</h2>
+                <lord-icon
+                    src="https://cdn.lordicon.com/okgbpdra.json"
+                    trigger="loop"
+                    stroke="light"
+                    colors="primary:#000000,secondary:#d4af37"
+                    class="lord-icon-style"
+                ></lord-icon>
+                <h3>Formal</h3>
+                <p>Para que disfrutes al máximo tu estancia en esta hermosa ciudad colonial, te compartimos algunos consejos útiles:</p>
+                <!-- Botones desplegables -->
+                <button onclick="toggleSection('viajeros')">Recomendaciones viajeros</button>
+                <div class="details" id="viajeros">
+                    <button onclick="toggleSection('calzado')">Calzado Adecuado</button>
+                    <div class="details" id="calzado">
+                        <p>Antigua Guatemala tiene calles empedradas, por lo que recomendamos llevar zapatos cómodos para desplazarte de un lugar a otro si lo que deseas es caminar.</p>
+                    </div>
+        
+                    <button onclick="toggleSection('abrigo')">Abrigo</button>
+                    <div class="details" id="abrigo">
+                        <p>El clima en Antigua puede ser variable, con mañanas soleadas y noches frescas. Te sugerimos llevar un chal, pashmina o abrigo ligero elegante para mantenerte abrigado sin perder el estilo.</p>
+                    </div>
+                </div>
+        
+                <button onclick="toggleSection('sugerencias')">Sugerencias</button>
+                <div class="details" id="sugerencias">
+                    <p>No usar color blanco, ivory, beige o colores que se le parezcan al blanco.</p>
+                </div>
+        
+                <button onclick="toggleSection('damas')">Damas de honor</button>
+                <div class="details" id="damas">
+                    <p>Color "Baby Blue"</p>
+                </div>
+        
+                <button onclick="toggleSection('vestimentas')">Ideas de Vestimentas</button>
+                <div class="details" id="vestimentas">
+                    <button onclick="window.open('https://es.pinterest.com/search/pins/?q=Vestidos%20invitadas%20de%20boda%20de%20d%C3%ADa&rs=typed', '_blank')">Mujeres</button>
+                    <button onclick="window.opne('https://es.pinterest.com/search/pins/?q=Trajes%20formales%20para%20hombres%20invitados%20boda%20de%20d%C3%ADa&rs=typed', '_blank')">Hombres</button>
+                </div>
+            </div>
+            <!--Sección de galería de fotos-->
+            <div class="gallery-section fade-in-element fade-in-element">
+                <h2>Galería de fotos</h2>
+            
+                <!-- Checkbox oculto que controla la visibilidad del modal -->
+                <input type="checkbox" id="toggle-modal" class="hidden-checkbox">
+            
+                <!-- Modal de fotos -->
+                <div id="photo-modal" class="modal">
+                    <!-- Label para cerrar el modal -->
+                    <label for="toggle-modal" class="close">&times;</label>
+                    <img class="modal-content" id="main-photo-modal" alt="modal">
+                </div> 
+            
+                <!-- Galería principal -->
+                <div class="gallery-main fade-in-element">
+                    <!-- Al hacer clic en la imagen principal, se abre el modal -->
+                    <label for="toggle-modal">
+                        <img id="main-photo" src="/images/23.png" alt="Foto principal" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                </div>
+            
+                <!-- Miniaturas de la galería -->
+                <div class="gallery-thumbs fade-in-element">
+                    <!-- Cada miniatura también actúa como disparador del modal -->
+                    <label for="toggle-modal">
+                        <img src="images/23.png"Foto 1" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/24.png" alt="Foto 2" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/9.png" alt="Foto 3" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/11.png" alt="Foto 4" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/27.png" alt="Foto 5" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/26.png" alt="Foto 6" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/16.png" alt="Foto 7" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                    <label for="toggle-modal">
+                        <img src="/images/28.png" alt="Foto 8" onclick="changePhoto(this)" loading="lazy">
+                    </label>
+                </div>
+            </div>
+            <!--Sección de album-->
+            <div class="album-section fade-in-element">
+                <h2>¡Hagamos los recuerdos inolvidables!</h2>
+                <h1 class="hashtag">#bodamarroquincarias</h1>
+                <div class="qr-container">
+                    <div id="qrCode"></div>
+                    <img src="/images/QR-ALBUMDEFOTOS.png" alt="Escane el QR" width="400">
+                    <p>Escanea el código QR o usa el botón para subir tus fotos</p>
+                    <a class="upload-btn" href="https://drive.google.com/drive/folders/1DnN7fmcR2-DjJQg4hrB-VWfdQo16bwzE?usp=drive_link" target="_blank">SUBIR FOTOS</a>
+                </div>
+            </div>
+            <!--Sección de buenos deseos-->
+            <div class="wishes-section fade-in-element fade-in-element">
+                <h2>Buenos deseos</h2>
+                <button  type="button" onclick="toggleWishes()">VER BUENOS DESEOS</button>
+                <div id="wishes" class="hidden">
+                    <!-- Aquí se mostrarán los buenos deseos -->
+                </div>
+                <button type="button" onclick="toggleWishForm()">ENVIAR BUENOS DESEOS</button>
+                <div id="wish-form" class="hidden">
+                    <h3>Enviar Buenos Deseos</h3>
+                    <label for="wish-name">Nombre:</label>
+                    <input type="text" id="wish-name">
+                    <label for="wish-message">Mensaje de buenos deseos:</label>
+                    <textarea id="wish-message"></textarea>
+                    <button type="submit" onclick="submitWish()">ENVIAR</button>
+                </div>
+            </div>
+            <!--Sección de no niños-->
+            <div class="nochild-section fade-in-element fade-in-element">
+                <h2>Exclusivo para adultos</h2>
+                <p>Para disfrutar plenamente de esta celebración, hemos decidido que nuestra boda sea un evento solo para adultos. Agradecemos su comprensión.</p>
+            </div>
+            <!--Sección de confirmación-->
+            <div class="rsvp-section fade-in-element fade-in-element">
+                <h2>Confirmación</h2>
+                <lord-icon 
+                 src="https://cdn.lordicon.com/wzwygmng.json" 
+                 trigger="loop" 
+                 stroke="light"  
+                 colors="primary:#000000,secondary:#d4af37" 
+                 class="lord-icon-style"
+                 ></lord-icon>
+                <p>Para nosotros es muy importante que confirmes tu asistencia antes del 10 de Mayo, o bien indicarnos si no podrás acompañarnos.</p>
+                <button type="button"  onclick="location.href='https://wa.me/50230202346?text='">Whatsapp</button>
+                <button type="button"  onclick="location.href='mailto:bodamarroquincarias@gmail.com'">Correo</button>
+            </div>
+            <!--Sección de agradecimientos-->
+            <div class="photo-full fade-in-element fade-in-element">
+                <img src="/images/20.png" alt="Foto de la pareja" loading="lazy">
+            </div>
+            <div class="banner-section fade-in-element fade-in-element1">
+                <p>Estamos emocionados de compartir este día tan especial con ustedes. Que esta celebración esté llena de amor, alegría y bendiciones. ¡Nos vemos en nuestra boda!</p>
+            </div>
+            <!--footer-->
+            <footer class="fade-in-element fade-in-element">
+                <div class="social-icons">
+                    <a href="https://wa.me/50236011737" aria-label="Whatsapp"><i class="fab fa-whatsapp fade-in-element"></i></a>
+                    <a href="https://www.facebook.com/thetwodesign?mibextid=ZbWKwl" aria-label="Facebook"><i class="fab fa-facebook fade-in-element"></i></a>
+                    <a href="https://www.instagram.com/thetwodesign?igsh=M2k5eWF4dHl3czNv" aria-label="Instagram"><i class="fab fa-instagram fade-in-element"></i></a>
+                </div>
+                <div class="logo fade-in-element">
+                    <img src="/images/2.png" alt="Logo de la empresa">
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+    <script src="script.js" defer></script>
+    <script type="module" src="loads.js" defer></script>
+    <script type="module" src="database.js" defer></script>
+</body>
+</html>
