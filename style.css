@@ -216,21 +216,13 @@ html, body {
     padding: 15px 0 15px;
     margin: -5px 0 0 0;
 }
-.guest-section p{
-    font-size: 55px;
-    margin: 0;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
-    background: linear-gradient(to right, #000000, #1a1a1a, #2c2c2c, #1a1a1a, #000000); 
-    -webkit-background-clip: text; 
-    color: transparent;
-}
 .invitation-info-section {
     position: relative;
     background-color: #c0cca8;
     text-align: center;
     padding: 15px 0 15px;
 }
-.invitation-info-section p {
+.invitation-info-section p , .guest-section p{
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to right, #A6B48B, #8B9C74, #5F6D4B, #8B9C74, #A6B48B); 
     -webkit-background-clip: text;
