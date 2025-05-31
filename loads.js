@@ -1,5 +1,6 @@
+
 const guests = [
-    { id: "1", name: "Edwin Marroquin, Flor de Marroquin, Brenda Marroquin (hija) y Jorge Marroquin (hijo)", passes: 4 },
+    { id: "1", name: "Francis & Fernando", passes: 2 },
 ];
 
 document.addEventListener("DOMContentLoaded", function() {
