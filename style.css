@@ -103,10 +103,10 @@ html, body {
     margin: 0;
     font-size: 48px;
     font-family: Garamond, serif;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to right, #A6B48B, #8B9C74, #5F6D4B, #8B9C74, #A6B48B);
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
     -webkit-background-clip: text;
     color: transparent;
+    animation: shine 1.5s infinite linear;
 }
 .hidden {
     display: none !important;
@@ -139,12 +139,14 @@ html, body {
     position: absolute; /* Posiciona el texto sobre la imagen */
     max-width: 100%;
     z-index: 10; /* Asegura que el texto esté por encima de otros elementos */
+    margin-top:140px;
 }
 /* Estilo para los encabezados y párrafos */
 .photo-text h1 {
     font-size: 150px;
     text-transform: capitalize;
     margin-top: -800px;
+    padding: 10px;
 }
 .photo-text h2 {
     font-size: 100px;
