@@ -748,6 +748,7 @@ footer .logo img {
         font-size: 45px;
         margin-bottom: 10px;
         text-transform: initial;
+        padding: 5px;
     }
     .itinerary-item h2{
         font-size: 40px;
