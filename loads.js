@@ -1,6 +1,6 @@
 
 const guests = [
-    { id: "1", name: "Francis & Fernando", passes: 2 },
+    { id: "1", name: "Maria Estrada", passes: 1, gender: "femenino" }
 ];
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -18,16 +18,28 @@ document.addEventListener("DOMContentLoaded", function() {
     const queryParams = getQueryParams();
     const guestId = queryParams.id;
 
-    // Buscar el invitado en el array
     const guest = guests.find(g => g.id === guestId);
 
     if (guest) {
-        document.getElementById('guest-name').textContent = `¡${guest.name}, ${
-            guest.passes > 1 ? 'están invitados' : 'estás invitado'
-        }!`;
+        let invitText = '';
+
+        if (guest.passes === 1) {
+            invitText = guest.gender === 'femenino'
+                ? `¡${guest.name}, está invitada!`
+                : `¡${guest.name}, está invitado!`;
+        } else if (guest.passes >= 2) {
+            if (guest.gender === 'femenino') {
+                invitText = `¡${guest.name}, están invitadas!`;
+            } else {
+                invitText = `¡${guest.name}, están invitados!`;
+            }
+        }
+
+        document.getElementById('guest-name').textContent = invitText;
         document.getElementById('passes').textContent = `${guest.passes} ${guest.passes === 1 ? 'pase' : 'pases'}`;
     } else {
         document.getElementById('guest-name').textContent = `¡Invitado no encontrado!`;
-        document.querySelector('.invitation-info-section').style.display = 'none';
+        const section = document.querySelector('.invitation-info-section');
+        if (section) section.style.display = 'none';
     }
 });
