@@ -30,7 +30,7 @@ const guests = [
     { id: "29", name: "Anthony Aguirre", passes: 2, gender: "masculino" },
     { id: "30", name: "Amilcar y Nora", passes: 2, gender: "mixto" },
     { id: "31", name: "José Quiñonez", passes: 2, gender: "masculino" },
-    { id: "32", name: "Estas invitado", passes: 1, gender: "masculino" }
+    { id: "32", name: "Usted", passes: 1, gender: "masculino" }
   ];
 
 document.addEventListener("DOMContentLoaded", function() {
